@@ -8,19 +8,23 @@ class Solution:
         s = set(nums)
         y = list(s)
         
-         if nums == []:
+        y = sorted(y)
+        if nums == []:
             return 0
        
         #print(y)
-        j =0
+        
         for i in range(len(y)):
             #print(i)
             nums[i] = y[i]
-            #print(i)
-            
-        del nums[len(y)]    #j +=1
-        #print(nums)
+            #print(nums[i])
+        
+        for i in range(len(y),len(nums)):
+            #if(i != len(nums)-1):
+            del nums[len(y)] 
+            #else:
+            #    print("I am screwed")
         
         return len(nums)
 x = Solution()
-print(x.removeDuplicates([1,1,2]))
+print(x.removeDuplicates([-1,0,3]))
