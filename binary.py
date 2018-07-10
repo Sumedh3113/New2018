@@ -14,6 +14,6 @@ result = rev_bin(value)
 
 y = ''.join(result)
 
-z = int(y,2)# type cast to interger
+z = int(y,2)# type cast to integer
 
 sys.stdout.write(str(z))
